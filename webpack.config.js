@@ -8,7 +8,11 @@ module.exports = {
     path: path.resolve(__dirname, "./dist"),
     filename: "index_bundle.js",
   },
-  plugins: [new HtmlWebpackPlugin()],
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "./public/index.html",
+    }),
+  ],
   module: {
     rules: [
       {
