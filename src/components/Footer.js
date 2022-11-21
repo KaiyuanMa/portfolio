@@ -6,10 +6,10 @@ function Footer() {
       <div>
         <div className="footer-links">
           <a href="https://www.linkedin.com/in/kaiyuanma/" target="_blank">
-            <i class="fa-brands fa-linkedin"></i>
+            <i className="fa-brands fa-linkedin"></i>
           </a>
           <a href="https://github.com/KaiyuanMa" target="_blank">
-            <i class="fa-brands fa-square-github"></i>
+            <i className="fa-brands fa-square-github"></i>
           </a>
         </div>
       </div>

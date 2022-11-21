@@ -173,7 +173,7 @@ body {
 }
 
 #menu[data-active-index="0"] > #menu-background-pattern {
-  background-position: 50% 25%;
+  background-position: 50% 15%;
 }
 
 #menu[data-active-index="1"] > #menu-background-pattern {
@@ -181,11 +181,7 @@ body {
 }
 
 #menu[data-active-index="2"] > #menu-background-pattern {
-  background-position: 50% -25%;
-}
-
-#menu[data-active-index="3"] > #menu-background-pattern {
-  background-position: 50% -50%;
+  background-position: 50% -15%;
 }
 
 /* content */
@@ -501,6 +497,7 @@ body {
 }
 
 .board-img:hover {
+  z-index: 1000;
   scale: 1.5;
 }
 
@@ -531,4 +528,20 @@ body {
   font-size: 1.7rem;
   display: flex;
   gap: 10px;
+}
+
+/* Contact */
+.contact-page {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.email-from {
+  display: flex;
+  flex-direction: column;
 }
