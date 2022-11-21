@@ -205,6 +205,19 @@ body {
   padding: 0;
 }
 
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
 .full-page-scroll {
   scroll-snap-align: start;
 }
@@ -224,33 +237,6 @@ body {
   font-size: clamp(1rem, 2.5vw, 2rem);
 }
 
-@keyframes background-pan {
-  from {
-    background-position: 0% center;
-  }
-  to {
-    background-position: -200% center;
-  }
-}
-
-/* #intro-text > .title > .magic-text {
-  animation: background-pan 3s linear infinite;
-  background: linear-gradient(to right, white, #828385, #565656, white);
-  background-size: 200%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  white-space: nowrap;
-} */
-
-@-webkit-keyframes aitf {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 100% 50%;
-  }
-}
-
 #intro-text > .title {
   text-align: center;
   font-size: 3rem;
@@ -258,12 +244,6 @@ body {
   padding-bottom: 1rem;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 1px;
-  background: url(./img/text-background.png) repeat-y;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-animation: aitf 50s linear infinite;
-  -webkit-transform: translate3d(0, 0, 0);
-  -webkit-backface-visibility: hidden;
 }
 
 #intro-text > .subtitle {
@@ -292,7 +272,7 @@ body {
 
 #skill-page {
   height: 100vh;
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  /* border-top: 1px solid rgba(255, 255, 255, 0.5); */
   display: flex;
   flex-direction: column;
   align-items: center;
