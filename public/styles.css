@@ -444,8 +444,10 @@ body {
 }
 
 .project-name {
-  font-size: xxx-large;
+  font-size: clamp(2rem, 3vw, 3rem);
   font-weight: bold;
+  cursor: pointer;
+  transition-duration: 1s;
 }
 
 .project-basic-info {
@@ -458,11 +460,6 @@ body {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.project-name {
-  cursor: pointer;
-  transition-duration: 1s;
-}
-
 .project-name:hover {
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 1px;
@@ -470,7 +467,7 @@ body {
 
 .project-showoff {
   display: flex;
-  width: 30rem;
+  max-width: 30rem;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -488,7 +485,7 @@ body {
 }
 
 .sequirrel-img {
-  width: 25rem;
+  max-width: 25vw;
   border: 1px solid rgba(255, 255, 255, 0.5);
   padding: 10px;
   border-radius: 10px;
@@ -508,12 +505,8 @@ body {
   background-repeat: no-repeat;
 }
 
-#board-company-title {
-  font-size: clamp(3rem, 32px, 8rem);
-}
-
 .board-img {
-  width: 25rem;
+  width: 25vw;
   /* border: 1px solid rgba(255, 255, 255, 0.5); */
   padding: 10px;
   border-radius: 10px;
