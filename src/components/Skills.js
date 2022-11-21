@@ -14,7 +14,7 @@ function Skills() {
   }, []);
   return (
     <div id="skill-page" className="full-page-scroll">
-      <div className="page-title">SKILL</div>
+      <div className="page-title">SKILLS</div>
       <div id="cards">
         <div className="card">
           <div className="card-border"></div>
@@ -121,9 +121,7 @@ function Skills() {
               <i class="fa-brands fa-python"></i>
               <div className="card-subtext">
                 <div className="card-subtext-title">Python</div>
-                <div className="card-subtext-text">
-                  I say she is a easy girl
-                </div>
+                <div className="card-subtext-text">I don't hate it</div>
               </div>
             </div>
           </div>
