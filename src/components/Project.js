@@ -15,8 +15,8 @@ function Project() {
           <div className="img-container sequirrel-img">
             <img src={sequirrel1} />
           </div>
-          <div className="project-showoff-text" id="sequirrel-text-1">
-            - Sequirrel is a tool that allows developers to map out database
+          <div className="project-showoff-text sequirrel-text">
+            Sequirrel is a tool that allows developers to map out database
             relationships, and define models.
           </div>
         </div>
@@ -40,8 +40,8 @@ function Project() {
             <img src={sequirrel2} />
             <img src={sequirrel3} />
           </div>
-          <div className="project-showoff-text" id="sequirrel-text-1">
-            - Generate sequelize database code based on the models, and
+          <div className="project-showoff-text sequirrel-text">
+            Generate sequelize database code based on the models, and
             relationships on the user's map.
           </div>
         </div>
@@ -49,14 +49,23 @@ function Project() {
 
       {/* Board Company */}
       <div className="project full-page-scroll" id="board-company">
-        <div className="project-showoff">
-          <div className="img-container board-img">
-            <img src={board1} />
-            <img src={board3} />
+        <div className="board-showoff">
+          <div className="project-showoff">
+            <div className="img-container board-img">
+              <img src={board1} />
+            </div>
+            <div className="project-showoff-text board-text">
+              Home page with carousel
+            </div>
           </div>
-          <div className="project-showoff-text" id="sequirrel-text-1">
-            - The Boarding Company is an e-commerce website for selling board
-            games.
+          <div className="project-showoff">
+            <div className="img-container board-img">
+              <img src={board3} />
+            </div>
+            <div className="project-showoff-text board-text">
+              User page with ability to change icon, password, and check past
+              orders
+            </div>
           </div>
         </div>
         <div className="project-basic-info">
@@ -76,14 +85,22 @@ function Project() {
             <div className="project-tech">Express</div>
           </div>
         </div>
-        <div className="project-showoff">
-          <div className="img-container board-img">
-            <img src={board2} />
-            <img src={board4} />
+        <div className="board-showoff">
+          <div className="project-showoff">
+            <div className="img-container board-img">
+              <img src={board2} />
+            </div>
+            <div className="project-showoff-text board-text">
+              Product page with searching function
+            </div>
           </div>
-          <div className="project-showoff-text" id="sequirrel-text-1">
-            - Utilized JWT for secure user login, and admin login for updating,
-            adding, and deleting products.
+          <div className="project-showoff">
+            <div className="img-container board-img">
+              <img src={board4} />
+            </div>
+            <div className="project-showoff-text board-text">
+              Admin page to add, delete and edit products
+            </div>
           </div>
         </div>
       </div>

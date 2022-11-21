@@ -1,6 +1,8 @@
 import { Route, Routes, NavLink, HashRouter } from "react-router-dom";
 import React, { useEffect } from "react";
 import Home from "./components/Home";
+import AboutMe from "./components/AboutMe";
+import Contact from "./components/Contact";
 
 function App() {
   const menuToggle = () => {
@@ -28,7 +30,9 @@ function App() {
     <HashRouter>
       <div className="nav">
         <div className="nav-bar">
-          <div className="nav-bar-icon"></div>
+          <a href="/" className="nav-bar-icon">
+            logo
+          </a>
           <div className="nav-bar-toggle" onClick={menuToggle}>
             <span></span>
             <span></span>
@@ -37,16 +41,13 @@ function App() {
         </div>
         <div id="menu" className="left-hide">
           <div id="menu-items">
-            <NavLink to="/" className="menu-item">
+            <NavLink to="/" className="menu-item" onClick={menuToggle}>
               Home
             </NavLink>
-            <NavLink to="/" className="menu-item">
-              Projects
+            <NavLink to="/aboutMe" className="menu-item" onClick={menuToggle}>
+              About Me
             </NavLink>
-            <NavLink to="/" className="menu-item">
-              Background
-            </NavLink>
-            <NavLink to="/" className="menu-item">
+            <NavLink to="/contact" className="menu-item" onClick={menuToggle}>
               Contact
             </NavLink>
           </div>
@@ -56,6 +57,8 @@ function App() {
       <div className="content">
         <Routes>
           <Route exact path="/" element={<Home />} />
+          <Route exact path="/aboutMe" element={<AboutMe />} />
+          <Route exact path="/contact" element={<Contact />} />
         </Routes>
       </div>
     </HashRouter>
