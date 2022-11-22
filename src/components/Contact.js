@@ -24,6 +24,7 @@ function Contact() {
   };
   return (
     <div className="contact-page">
+      <div className="page-title">Contact</div>
       <div className="form-container">
         <form className="email-from" ref={form} onSubmit={sendEmail}>
           <input
@@ -34,8 +35,13 @@ function Contact() {
           />
           <input type="email" placeholder="Email" name="guest_email" required />
           <input type="text" placeholder="Subject (optional)" name="subject" />
-          <textarea name="message"></textarea>
-          <button type="submit">Submit</button>
+          <textarea
+            name="message"
+            placeholder="Your message goes here"
+          ></textarea>
+          <button type="submit" className="email-form-btn">
+            Send Message
+          </button>
         </form>
       </div>
     </div>
