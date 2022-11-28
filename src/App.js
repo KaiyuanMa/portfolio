@@ -31,7 +31,7 @@ function App() {
       <div className="nav">
         <div className="nav-bar">
           <a href="/" className="nav-bar-icon">
-            logo
+            K
           </a>
           <div className="nav-bar-toggle" onClick={menuToggle}>
             <span></span>
@@ -44,9 +44,9 @@ function App() {
             <NavLink to="/" className="menu-item" onClick={menuToggle}>
               Home
             </NavLink>
-            <NavLink to="/aboutMe" className="menu-item" onClick={menuToggle}>
+            {/* <NavLink to="/aboutMe" className="menu-item" onClick={menuToggle}>
               About Me
-            </NavLink>
+            </NavLink> */}
             <NavLink to="/contact" className="menu-item" onClick={menuToggle}>
               Contact
             </NavLink>
