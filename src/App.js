@@ -44,9 +44,9 @@ function App() {
             <NavLink to="/" className="menu-item" onClick={menuToggle}>
               Home
             </NavLink>
-            {/* <NavLink to="/aboutMe" className="menu-item" onClick={menuToggle}>
+            <NavLink to="/aboutMe" className="menu-item" onClick={menuToggle}>
               About Me
-            </NavLink> */}
+            </NavLink>
             <NavLink to="/contact" className="menu-item" onClick={menuToggle}>
               Contact
             </NavLink>
