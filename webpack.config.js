@@ -40,7 +40,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, "css-loader"],
+        use: ["style-loader", "css-loader"],
         // use: ["style-loader", MiniCssExtractPlugin.loader, "css-loader"],
       },
     ],
