@@ -1,10 +1,19 @@
 import { Route, Routes, NavLink, HashRouter } from "react-router-dom";
-import React, { useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Home from "./components/Home";
-import AboutMe from "./components/AboutMe";
-import Contact from "./components/Contact";
+import AboutMe from "./components/AboutMe/AboutMe";
+import Contact from "./components/Contact/Contact";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+import ScrollSmoother from "gsap/ScrollSmoother";
 
 function App() {
+  gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+  let smoother = ScrollSmoother.create({
+    wrapper: "#smoother-wrapper",
+    content: "#smooth-content",
+  });
+
   const menuToggle = () => {
     const toggleBtn = document.querySelector(".nav-bar-toggle");
     const menu = document.querySelector("#menu");
@@ -18,19 +27,31 @@ function App() {
       (item, index) => {
         item.onmouseover = () => {
           menu.dataset.activeIndex = index;
+          console.log(index);
         };
       }
     );
   };
 
   useEffect(() => {
+    gsap.from(".nav-bar-icon", {
+      duration: 1,
+      opacity: 0,
+      delay: 0.5,
+    });
+    gsap.from(".nav-bar-toggle", {
+      duration: 1,
+      opacity: 0,
+      delay: 0.5,
+    });
     menuBackground();
   }, []);
+
   return (
     <HashRouter>
       <div className="nav">
         <div className="nav-bar">
-          <a href="/" className="nav-bar-icon">
+          <a className="nav-bar-icon" href="/">
             K
           </a>
           <div className="nav-bar-toggle" onClick={menuToggle}>
@@ -54,12 +75,16 @@ function App() {
           <div id="menu-background-pattern"></div>
         </div>
       </div>
-      <div className="content">
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route exact path="/aboutMe" element={<AboutMe />} />
-          <Route exact path="/contact" element={<Contact />} />
-        </Routes>
+      <div id="smooth-wrapper">
+        <div id="smooth-content">
+          <div className="content">
+            <Routes>
+              <Route exact path="/" element={<Home />} />
+              <Route exact path="/aboutMe" element={<AboutMe />} />
+              <Route exact path="/contact" element={<Contact />} />
+            </Routes>
+          </div>
+        </div>
       </div>
     </HashRouter>
   );

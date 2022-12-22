@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import * as dat from "dat.gui";
+import "./styles.css";
 
 function IntroBackground() {
   useEffect(() => {
@@ -62,12 +63,6 @@ function IntroBackground() {
     // gui.add(material, "metalness");
 
     const updateLight = (event) => {
-      console.log(
-        window.pageYOffset ||
-          document.documentElement.scrollTop ||
-          document.body.scrollTop ||
-          0
-      );
       pointLight.position.z = document.documentElement.scrollTop * 0.01 + 3;
       camera.position.z = document.documentElement.scrollTop * 0.005 + 3;
       sphere.position.y = document.documentElement.scrollTop * 0.001;

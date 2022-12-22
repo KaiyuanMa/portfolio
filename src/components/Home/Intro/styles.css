@@ -1,0 +1,45 @@
+#intro {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  margin: 0px;
+  align-items: center;
+  align-content: center;
+  position: relative;
+}
+
+#intro-text {
+  width: 60%;
+  font-size: clamp(1rem, 2.5vw, 2rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#intro-text > .title {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  width: 25rem;
+  overflow: hidden;
+}
+
+#intro-text > .subtitle {
+  width: 25rem;
+  font-size: clamp(1rem, 0.5vw, 2rem);
+  overflow: hidden;
+}
+
+#webgl {
+  position: absolute;
+  top: 0;
+  left: 25%;
+  outline: none;
+  mix-blend-mode: normal;
+  z-index: -1;
+}
+
+.dg {
+  z-index: 100;
+}
