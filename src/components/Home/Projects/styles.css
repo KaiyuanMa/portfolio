@@ -22,6 +22,7 @@
     rgba(20, 20, 20, 1) 1.05px
   );
   background-size: 21px 21px;
+  overflow: hidden;
 }
 
 .project-name {
@@ -52,6 +53,10 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.board-company-project {
+  opacity: 0;
 }
 
 .project-showoff-text {

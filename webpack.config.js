@@ -5,10 +5,10 @@ const path = require("path");
 module.exports = {
   devtool: "source-map",
   entry: "./src/index.js",
-  output: {
-    path: path.resolve(__dirname, "./dist"),
-    filename: "index_bundle.js",
-  },
+  // output: {
+  //   path: path.resolve(__dirname, "./dist"),
+  //   filename: "index_bundle.js",
+  // },
   plugins: [
     new HtmlWebpackPlugin({
       template: "./public/template.html",
@@ -40,7 +40,8 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, "css-loader"],
+        // use: [MiniCssExtractPlugin.loader, "css-loader"],
+        use: ["style-loader", "css-loader"],
       },
     ],
   },
