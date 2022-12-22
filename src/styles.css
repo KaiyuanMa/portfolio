@@ -1,0 +1,395 @@
+/* @font-face {
+  font-family: "Unbounded";
+  src: url("../public/font/Unbounded-SemiBold.woff2") format("woff2"),
+    url("../public/font/Unbounded-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Unbounded";
+  src: url("../public/font/Unbounded-Black.woff2") format("woff2"),
+    url("../public/font/Unbounded-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Unbounded";
+  src: url("../public/font/Unbounded-Bold.woff2") format("woff2"),
+    url("../public/font/Unbounded-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Unbounded";
+  src: url("../public/font/Unbounded-ExtraBold.woff2") format("woff2"),
+    url("../public/font/Unbounded-ExtraBold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Unbounded";
+  src: url("../public/font/Unbounded-Regular.woff2") format("woff2"),
+    url("../public/font/Unbounded-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Unbounded";
+  src: url("../public/font/Unbounded-Light.woff2") format("woff2"),
+    url("../public/font/Unbounded-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Unbounded";
+  src: url("../public/font/Unbounded-ExtraLight.woff2") format("woff2"),
+    url("../public/font/Unbounded-ExtraLight.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Unbounded";
+  src: url("../public/font/Unbounded-Medium.woff2") format("woff2"),
+    url("../public/font/Unbounded-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+} */
+
+:root {
+  --bg-color: rgb(20, 20, 20);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+.full-page-scroll {
+  scroll-snap-align: start;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: white;
+  font-family: Unbounded;
+  margin: 0px;
+  overflow-x: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+.left-hide {
+  transform: translateX(100%);
+  transition: transform 0.8s ease-in-out;
+}
+
+.left-hide-active {
+  transform: none;
+}
+
+.nav-bar-toggle {
+  height: 100%;
+  display: flex;
+  z-index: 0;
+  -webkit-uer-select: none;
+  user-select: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5%;
+}
+
+.nav-bar-toggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+
+  background: white;
+  border-radius: 3px;
+
+  z-index: 1;
+
+  transform-origin: 4px 0px;
+
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+
+.nav-bar-toggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+.nav-bar-toggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+.nav-bar-toggle-active span:nth-last-child(3) {
+  transform: rotate(45deg) translate(0, -1.5px);
+}
+
+.nav-bar-toggle-active span:nth-last-child(2) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+.nav-bar-toggle-active span:nth-last-child(1) {
+  transform: rotate(-45deg) translate(-3px, -1.5px);
+}
+
+.nav-bar-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 2rem;
+  background-color: var(--bg-color);
+  border: 1px solid white;
+  margin-left: 5%;
+  border-radius: 5px;
+  color: white;
+  opacity: 1;
+}
+
+.nav-bar {
+  height: 2rem;
+  width: 100vw;
+  position: fixed;
+  top: 0px;
+  background-color: transparent;
+  z-index: 21;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  margin-top: 2%;
+}
+#menu {
+  width: 100vw;
+  height: 100vh;
+  margin: 0px;
+  background-color: rgba(83, 83, 83, 0.4);
+  backdrop-filter: blur(0.5rem);
+  position: fixed;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-active {
+  transform: none;
+}
+
+.menu-item {
+  text-decoration: none;
+  color: white;
+  display: block;
+  font-size: clamp(3rem, 1vw, 8rem);
+  padding: clamp(0.25rem, 1vw, 1rem) 0rem;
+  transition: opacity 400ms ease;
+  text-align: center;
+}
+
+#menu-items {
+  z-index: 2;
+}
+
+#menu-items:hover > .menu-item {
+  opacity: 0.3;
+}
+
+#menu-items:hover > .menu-item:hover {
+  opacity: 1;
+}
+
+#menu-background-pattern {
+  height: 100vh;
+  width: 100vw;
+
+  background-image: radial-gradient(rgba(20, 20, 20, 0.1) 9%, transparent 9%);
+  background-position: 50% 0%;
+  background-size: 9vmin 9vmin;
+  background-image: radial-gradient(#85869b 1px, transparent 0.9px);
+  background-color: transparent;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 1;
+  transition: all 800ms ease, background-color 0.2s ease;
+}
+
+#menu-items:hover ~ #menu-background-pattern {
+  scale: 1.1;
+  opacity: 1;
+  background-color: rgb(45, 45, 45);
+}
+
+#menu[data-active-index="0"] > #menu-background-pattern {
+  background-position: 50% 15%;
+}
+
+#menu[data-active-index="1"] > #menu-background-pattern {
+  background-position: 50% 0%;
+}
+
+#menu[data-active-index="2"] > #menu-background-pattern {
+  background-position: 50% -15%;
+}
+
+.content {
+  margin: 0px;
+}
+
+.animation-text {
+  /* transform: translateY(100%); */
+  overflow: hidden;
+}
+
+/* ------------------------- */
+/* AboutMe */
+.grid-container {
+  height: auto;
+  display: grid;
+  grid-template: repeat(3, 18vw) / repeat(4, 20vw);
+  grid-template-areas:
+    "education education education education"
+    "language  library  tools framework"
+    "experience experience experience project";
+  justify-content: center;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+.box {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 3vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.education-box {
+  grid-area: education;
+}
+
+.language-box {
+  border: none;
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  grid-area: language;
+}
+
+.framework-box {
+  border: none;
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+  grid-area: framework;
+}
+
+.library-box {
+  border: none;
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  grid-area: library;
+}
+
+.tools-box {
+  border: none;
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  grid-area: tools;
+}
+
+.experience1-box {
+  border-right: none;
+  grid-area: experience;
+}
+
+.project-box {
+  grid-area: project;
+}
+
+.box-header {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.box-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.box-content-links > a {
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+
+.box-content-links > a:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+.box-content-container {
+  display: flex;
+}
+
+.flex-box-content {
+  color: rgba(255, 255, 255, 0.6);
+  width: 50%;
+  font-size: 15px;
+}
+
+.flex-box-content > h2 {
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+}
+
+#music-container {
+  margin-top: 3rem;
+  height: 20rem;
+  width: 100%;
+}
+
+#music-title {
+  font-size: 2rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

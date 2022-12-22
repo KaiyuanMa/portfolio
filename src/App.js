@@ -6,6 +6,7 @@ import Contact from "./components/Contact/Contact";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import ScrollSmoother from "gsap/ScrollSmoother";
+import "./styles.css";
 
 function App() {
   gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
