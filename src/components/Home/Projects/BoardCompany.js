@@ -22,25 +22,6 @@ function BoardCompany() {
   }, []);
   return (
     <div className="project full-page-scroll" id="board-company">
-      <div className="board-showoff">
-        <div className="project-showoff board-company-project">
-          <div className="img-container board-img">
-            <img src={board1} />
-          </div>
-          <div className="project-showoff-text board-text">
-            Home page with carousel
-          </div>
-        </div>
-        <div className="project-showoff board-company-project">
-          <div className="img-container board-img">
-            <img src={board3} />
-          </div>
-          <div className="project-showoff-text board-text">
-            User page with ability to change icon, password, and check past
-            orders
-          </div>
-        </div>
-      </div>
       <div className="project-basic-info">
         <div className="project-tags">
           <div className="project-tag">Team Project</div>
@@ -56,24 +37,6 @@ function BoardCompany() {
           <div className="project-tech"></div>
           <div className="project-tech">React Redux</div>
           <div className="project-tech">Express</div>
-        </div>
-      </div>
-      <div className="board-showoff">
-        <div className="project-showoff board-company-project">
-          <div className="img-container board-img">
-            <img src={board2} />
-          </div>
-          <div className="project-showoff-text board-text">
-            Product page with searching function
-          </div>
-        </div>
-        <div className="project-showoff board-company-project">
-          <div className="img-container board-img">
-            <img src={board4} />
-          </div>
-          <div className="project-showoff-text board-text">
-            Admin page to add, delete and edit products
-          </div>
         </div>
       </div>
     </div>

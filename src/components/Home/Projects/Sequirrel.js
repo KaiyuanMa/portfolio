@@ -7,21 +7,21 @@ import sequirrel3 from "../../../../public/img/sequirrel3.png";
 import "./styles.css";
 
 function Sequirrel() {
-  gsap.registerPlugin(ScrollTrigger);
-  useEffect(() => {
-    const tl = gsap.timeline();
-    tl.from(".project-showoff", { yPercent: -150, opacity: 0 });
-    ScrollTrigger.create({
-      animation: tl,
-      trigger: "#sequirrel",
-      start: "top top",
-      scrub: true,
-      pin: true,
-    });
-  }, []);
+  // gsap.registerPlugin(ScrollTrigger);
+  // useEffect(() => {
+  //   const tl = gsap.timeline();
+  //   tl.from(".project-showoff", { yPercent: -150, opacity: 0 });
+  //   ScrollTrigger.create({
+  //     animation: tl,
+  //     trigger: "#sequirrel",
+  //     start: "top top",
+  //     scrub: true,
+  //     pin: true,
+  //   });
+  // }, []);
   return (
     <div className="project full-page-scroll" id="sequirrel">
-      <div className="project-showoff">
+      {/* <div className="project-showoff">
         <div className="img-container sequirrel-img">
           <img src={sequirrel1} />
         </div>
@@ -29,7 +29,7 @@ function Sequirrel() {
           Sequirrel is a tool that allows developers to map out database
           relationships, and define models.
         </div>
-      </div>
+      </div> */}
       <div className="project-basic-info">
         <div className="project-tags">
           <div className="project-tag">Personal Project</div>
@@ -45,7 +45,7 @@ function Sequirrel() {
           <div className="project-tech">Express</div>
         </div>
       </div>
-      <div className="project-showoff">
+      {/* <div className="project-showoff">
         <div className="img-container sequirrel-img">
           <img src={sequirrel2} />
           <img src={sequirrel3} />
@@ -54,7 +54,7 @@ function Sequirrel() {
           Generate sequelize database code based on the models, and
           relationships on the user's map.
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

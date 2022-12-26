@@ -1,21 +1,24 @@
 #project {
   background-color: #85869b;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 #project-page {
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  height: 100vh;
+  overflow: hidden;
 }
 .project {
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  background-color: rgba(20, 20, 20, 1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  position: relative;
+  justify-content: center;
 }
 
 #sequirrel {
-  background-color: rgba(20, 20, 20, 1);
   opacity: 1;
   background-image: radial-gradient(
     rgba(126, 126, 126, 0.5) 1.05px,
@@ -57,6 +60,7 @@
 
 .board-company-project {
   opacity: 0;
+  z-index: 100;
 }
 
 .project-showoff-text {
@@ -123,4 +127,18 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
+}
+
+.project-link-btn {
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid transparent;
+  transition-duration: 0.5s;
+}
+
+.project-link-btn:hover {
+  border: 1px solid white;
 }

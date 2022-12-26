@@ -1,20 +1,72 @@
-import React from "react";
-import sequirrel1 from "../../../../public/img/sequirrel1.png";
-import sequirrel2 from "../../../../public/img/sequirrel2.png";
-import sequirrel3 from "../../../../public/img/sequirrel3.png";
-import board1 from "../../../../public/img/board1.png";
-import board2 from "../../../../public/img/board2.png";
-import board3 from "../../../../public/img/board3.png";
-import board4 from "../../../../public/img/board4.png";
+import React, { useEffect } from "react";
 import "./styles.css";
-import Sequirrel from "./Sequirrel";
-import BoardCompany from "./BoardCompany";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+import { Route, Routes, NavLink, HashRouter } from "react-router-dom";
 
 function Project() {
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    const tl = gsap.timeline();
+    tl.to("#sequirrel", { scale: 0.9, delay: 5, duration: 3 })
+      .to("#board-company", {
+        yPercent: -100,
+        duration: 10,
+      })
+      .to("#board-company", { delay: 5 });
+    ScrollTrigger.create({
+      animation: tl,
+      trigger: "#project-page",
+      start: "top top",
+      end: "+=4000",
+      scrub: 0.5,
+      pin: true,
+      markers: true,
+    });
+  }, []);
   return (
     <div id="project-page">
-      <Sequirrel />
-      <BoardCompany />
+      <div className="project full-page-scroll" id="sequirrel">
+        <div className="project-basic-info">
+          <div className="project-tags">
+            <div className="project-tag">Personal Project</div>
+          </div>
+          <a href="https://sequirrel.herokuapp.com/" target="_blank">
+            <div className="project-name">Sequirrel</div>
+          </a>
+          <div className="project-techs">
+            <div className="project-tech">React</div>
+            <div className="project-tech">Node.js</div>
+            <div className="project-tech">React Flow</div>
+            <div className="project-tech">React Redux</div>
+            <div className="project-tech">Express</div>
+          </div>
+        </div>
+        <NavLink to="/sequirrel">
+          <div className="project-link-btn">Learn More</div>
+        </NavLink>
+      </div>
+      <div className="project full-page-scroll" id="board-company">
+        <div className="project-basic-info">
+          <div className="project-tags">
+            <div className="project-tag">Team Project</div>
+          </div>
+          <a href="https://the-board-company.herokuapp.com/" target="_blank">
+            <div className="project-name" id="board-company-title">
+              The Board Company
+            </div>
+          </a>
+          <div className="project-techs">
+            <div className="project-tech">React</div>
+            <div className="project-tech">Node.js</div>
+            <div className="project-tech">React Redux</div>
+            <div className="project-tech">Express</div>
+          </div>
+        </div>
+        <NavLink to="/boardCompany">
+          <div className="project-link-btn">Learn More</div>
+        </NavLink>
+      </div>
     </div>
   );
 }
