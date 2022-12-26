@@ -70,7 +70,6 @@ function index() {
       end: "+=3000",
       scrub: true,
       pin: true,
-      markers: true,
     });
     const tl2 = gsap.timeline();
     tl2
@@ -101,7 +100,6 @@ function index() {
       //   end: "+=3000",
       snap: true,
       pin: true,
-      markers: true,
     });
     window.scrollTo(0, 0);
   }, []);

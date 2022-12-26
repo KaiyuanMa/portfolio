@@ -21,7 +21,6 @@ function Project() {
       end: "+=4000",
       scrub: 0.5,
       pin: true,
-      markers: true,
     });
   }, []);
   return (
