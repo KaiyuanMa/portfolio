@@ -1,7 +1,7 @@
 @font-face {
   font-family: "Unbounded";
-  src: url("../public/font/Unbounded-SemiBold.woff2") format("woff2"),
-    url("../public/font/Unbounded-SemiBold.woff") format("woff");
+  src: url("./font/Unbounded-SemiBold.woff2") format("woff2"),
+    url("./font/Unbounded-SemiBold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -9,8 +9,8 @@
 
 @font-face {
   font-family: "Unbounded";
-  src: url("../public/font/Unbounded-Black.woff2") format("woff2"),
-    url("../public/font/Unbounded-Black.woff") format("woff");
+  src: url("./font/Unbounded-Black.woff2") format("woff2"),
+    url("./font/Unbounded-Black.woff") format("woff");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -18,8 +18,8 @@
 
 @font-face {
   font-family: "Unbounded";
-  src: url("../public/font/Unbounded-Bold.woff2") format("woff2"),
-    url("../public/font/Unbounded-Bold.woff") format("woff");
+  src: url("./font/Unbounded-Bold.woff2") format("woff2"),
+    url("./font/Unbounded-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -27,8 +27,8 @@
 
 @font-face {
   font-family: "Unbounded";
-  src: url("../public/font/Unbounded-ExtraBold.woff2") format("woff2"),
-    url("../public/font/Unbounded-ExtraBold.woff") format("woff");
+  src: url("./font/Unbounded-ExtraBold.woff2") format("woff2"),
+    url("./font/Unbounded-ExtraBold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -36,8 +36,8 @@
 
 @font-face {
   font-family: "Unbounded";
-  src: url("../public/font/Unbounded-Regular.woff2") format("woff2"),
-    url("../public/font/Unbounded-Regular.woff") format("woff");
+  src: url("./font/Unbounded-Regular.woff2") format("woff2"),
+    url("./font/Unbounded-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -45,8 +45,8 @@
 
 @font-face {
   font-family: "Unbounded";
-  src: url("../public/font/Unbounded-Light.woff2") format("woff2"),
-    url("../public/font/Unbounded-Light.woff") format("woff");
+  src: url("./font/Unbounded-Light.woff2") format("woff2"),
+    url("./font/Unbounded-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -54,8 +54,8 @@
 
 @font-face {
   font-family: "Unbounded";
-  src: url("../public/font/Unbounded-ExtraLight.woff2") format("woff2"),
-    url("../public/font/Unbounded-ExtraLight.woff") format("woff");
+  src: url("./font/Unbounded-ExtraLight.woff2") format("woff2"),
+    url("./font/Unbounded-ExtraLight.woff") format("woff");
   font-weight: 200;
   font-style: normal;
   font-display: swap;
@@ -275,4 +275,123 @@ body {
 .animation-text {
   /* transform: translateY(100%); */
   overflow: hidden;
+}
+
+/* ------------------------- */
+/* AboutMe */
+.grid-container {
+  height: auto;
+  display: grid;
+  grid-template: repeat(3, 18vw) / repeat(4, 20vw);
+  grid-template-areas:
+    "education education education education"
+    "language  library  tools framework"
+    "experience experience experience project";
+  justify-content: center;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+.box {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 3vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.education-box {
+  grid-area: education;
+}
+
+.language-box {
+  border: none;
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  grid-area: language;
+}
+
+.framework-box {
+  border: none;
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+  grid-area: framework;
+}
+
+.library-box {
+  border: none;
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  grid-area: library;
+}
+
+.tools-box {
+  border: none;
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  grid-area: tools;
+}
+
+.experience1-box {
+  border-right: none;
+  grid-area: experience;
+}
+
+.project-box {
+  grid-area: project;
+}
+
+.box-header {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.box-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.box-content-links > a {
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+
+.box-content-links > a:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+.box-content-container {
+  display: flex;
+}
+
+.flex-box-content {
+  color: rgba(255, 255, 255, 0.6);
+  width: 50%;
+  font-size: 15px;
+}
+
+.flex-box-content > h2 {
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+}
+
+#music-container {
+  margin-top: 3rem;
+  height: 20rem;
+  width: 100%;
+}
+
+#music-title {
+  font-size: 2rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.horizontal-line {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.5);
 }
