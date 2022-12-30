@@ -1,5 +1,11 @@
-import { Route, Routes, NavLink, HashRouter } from "react-router-dom";
-import React, { useEffect, useRef, useState } from "react";
+import {
+  Route,
+  Routes,
+  NavLink,
+  HashRouter,
+  useLocation,
+} from "react-router-dom";
+import React, { useEffect, useRef, useState, useLayoutEffect } from "react";
 import Home from "./components/Home";
 import AboutMe from "./components/AboutMe/AboutMe";
 import Contact from "./components/Contact/Contact";
@@ -10,13 +16,9 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import ScrollSmoother from "gsap/ScrollSmoother";
 import "./styles.css";
 
+let smoother = null;
 function App() {
-  // gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-  // let smoother = ScrollSmoother.create({
-  //   wrapper: "#smoother-wrapper",
-  //   content: "#smooth-content",
-  //   smooth: 1,
-  // });
+  gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
   const menuToggle = () => {
     const toggleBtn = document.querySelector(".nav-bar-toggle");
@@ -31,13 +33,37 @@ function App() {
       (item, index) => {
         item.onmouseover = () => {
           menu.dataset.activeIndex = index;
-          console.log(index);
         };
       }
     );
   };
 
+  const { pathname } = useLocation();
+  useLayoutEffect(() => {
+    if (smoother) {
+      console.log(smoother);
+      smoother.kill();
+      smoother = null;
+    }
+    window.requestAnimationFrame(() => {
+      scrollTo(0, 0, {
+        behavior: "auto",
+        duration: 0,
+      });
+    });
+    smoother = ScrollSmoother.create({
+      wrapper: "#smoother-wrapper",
+      content: "#smooth-content",
+      smooth: 1,
+    });
+  }, [pathname]);
+
   useEffect(() => {
+    smoother = ScrollSmoother.create({
+      wrapper: "#smoother-wrapper",
+      content: "#smooth-content",
+      smooth: 1,
+    });
     gsap.from(".nav-bar-icon", {
       duration: 1,
       opacity: 0,
@@ -53,6 +79,19 @@ function App() {
 
   return (
     <div>
+      <div id="smoother-wrapper">
+        <div id="smooth-content">
+          <div className="content">
+            <Routes>
+              <Route exact path="/" element={<Home />} />
+              <Route path="/aboutMe" element={<AboutMe />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/sequirrel" element={<Sequirrel />} />
+              <Route path="/the-board-company" element={<TheBoardCompany />} />
+            </Routes>
+          </div>
+        </div>
+      </div>
       <div className="nav">
         <div className="nav-bar">
           <a className="nav-bar-icon" href="/">
@@ -78,23 +117,6 @@ function App() {
           </div>
           <div id="menu-background-pattern"></div>
         </div>
-      </div>
-      {/* <div id="smooth-wrapper">
-        <div id="smooth-content"> */}
-      <div className="content">
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route exact path="/aboutMe" element={<AboutMe />} />
-          <Route exact path="/contact" element={<Contact />} />
-          <Route exact path="/sequirrel" element={<Sequirrel />} />
-          <Route
-            exact
-            path="/the-board-company"
-            element={<TheBoardCompany />}
-          />
-        </Routes>
-        {/* </div>
-        </div> */}
       </div>
     </div>
   );

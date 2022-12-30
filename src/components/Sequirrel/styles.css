@@ -107,6 +107,7 @@
 }
 
 #sequirrel-features-page {
+  position: relative;
   overflow: hidden;
   height: 100vh;
   width: 100vw;
@@ -115,11 +116,17 @@
   align-items: center;
 }
 
+#sequirrel-features-page-title {
+  position: absolute;
+  font-size: 3vw;
+  font-weight: 200;
+}
+
 #sequirrel-features {
   height: auto;
   width: 100vw;
   display: grid;
-  grid-template: repeat(3, 25vh) / repeat(4, 20vw);
+  grid-template: repeat(3, 25vh) / repeat(4, 19vw);
   grid-template-areas:
     "model model relationship relationship"
     "validation  menu  relationship relationship"

@@ -120,7 +120,9 @@
 }
 
 .card-sub > i {
+  font-size: 1rem;
   margin-right: 10px;
+  margin-top: 5px;
 }
 
 .card-subtext {
@@ -130,5 +132,11 @@
 .card-subtext-text {
   color: rgba(255, 255, 255, 0.5);
   font-size: 0.85rem;
+  font-weight: 200;
   margin-top: 8px;
+}
+
+.card-subtext-title {
+  font-weight: 200;
+  font-size: 1vw;
 }

@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import "./styles.css";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import { Route, Routes, NavLink, HashRouter } from "react-router-dom";
+import { Route, Routes, NavLink, Link, BrowserRouter } from "react-router-dom";
 
 function Project() {
   useEffect(() => {
@@ -22,6 +22,12 @@ function Project() {
       scrub: 0.5,
       pin: true,
     });
+    return () => {
+      ScrollTrigger.getAll().forEach((instance) => {
+        instance.kill();
+      });
+      gsap.killTweensOf(window);
+    };
   }, []);
   return (
     <div id="project-page">
@@ -41,9 +47,9 @@ function Project() {
             <div className="project-tech">Express</div>
           </div>
         </div>
-        <NavLink to="/sequirrel">
+        <Link to="/sequirrel">
           <div className="project-link-btn">Learn More</div>
-        </NavLink>
+        </Link>
       </div>
       <div className="project full-page-scroll" id="board-company">
         <div className="project-basic-info">

@@ -142,3 +142,7 @@
 .project-link-btn:hover {
   border: 1px solid white;
 }
+
+.project-techs {
+  font-weight: 200;
+}
