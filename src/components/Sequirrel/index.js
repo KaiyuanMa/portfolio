@@ -132,7 +132,6 @@ function index() {
       scrub: true,
       snap: true,
       pin: true,
-      markers: true,
     });
     return () => {
       ScrollTrigger.getAll().forEach((instance) => {
