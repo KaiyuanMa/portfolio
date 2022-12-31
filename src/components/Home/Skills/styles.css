@@ -145,3 +145,7 @@
   font-size: 1vw;
   grid-area: title;
 }
+
+#skill-page-text {
+  position: absolute;
+}

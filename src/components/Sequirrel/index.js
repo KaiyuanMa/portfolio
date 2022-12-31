@@ -10,6 +10,7 @@ import sequirrel3 from "../../../public/img/sequirrel3.png";
 import sequirrel4 from "../../../public/img/sequirrel4.png";
 import sequirrel5 from "../../../public/img/sequirrel5.png";
 import sequirrel6 from "../../../public/img/sequirrel6.png";
+import sequirrelVideo from "../../../public/video/sequirrelVideo.mp4";
 function index() {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger, TextPlugin);
@@ -35,7 +36,7 @@ function index() {
       stagger: 0.5,
       opacity: 0,
       ease: "power3",
-      delay: 0.5,
+      delay: 1,
     });
     gsap.from(".project-info-content", {
       duration: 1,
@@ -43,7 +44,7 @@ function index() {
       stagger: 0.5,
       opacity: 0,
       ease: "power3",
-      delay: 0.5,
+      delay: 1,
     });
     const tl = gsap.timeline();
     tl.to("#step-container", {
@@ -84,7 +85,7 @@ function index() {
         "#step-container-4",
         {
           opacity: 0,
-          duration: 1,
+          duration: 1.5,
         },
         "<"
       )
@@ -93,7 +94,7 @@ function index() {
       animation: tl,
       trigger: "#sequirrel-problem",
       start: "top top",
-      end: "+=3000",
+      end: "+=3500",
       scrub: true,
       pin: true,
     });
@@ -121,7 +122,7 @@ function index() {
       )
       .from(
         "#feature-relationship-container",
-        { xPercent: 200, duration: 1, ease: "power3" },
+        { xPercent: 200, duration: 1, ease: "power2" },
         "<"
       );
     ScrollTrigger.create({
@@ -132,6 +133,24 @@ function index() {
       scrub: true,
       snap: true,
       pin: true,
+    });
+    ScrollTrigger.create({
+      trigger: "#sequirrel-video-page",
+      start: "top top",
+    });
+
+    const videos = gsap.utils.toArray("video");
+    videos.forEach(function (video, i) {
+      ScrollTrigger.create({
+        trigger: video,
+        // scroller: ".videoContainer",
+        start: "top center",
+        end: "bottom center",
+        onEnter: () => video.play(),
+        onEnterBack: () => video.play(),
+        onLeave: () => video.pause(),
+        onLeaveBack: () => video.pause(),
+      });
     });
     return () => {
       ScrollTrigger.getAll().forEach((instance) => {
@@ -225,6 +244,17 @@ function index() {
             <div>Draw Out Relationships</div>
             <img src={sequirrel1} />
           </div>
+        </div>
+      </div>
+      <div id="sequirrel-video-page">
+        <div className="videoContainer">
+          <video
+            src={sequirrelVideo}
+            playsinline="true"
+            webkit-playsinline="true"
+            preload="auto"
+            muted="muted"
+          />
         </div>
       </div>
     </div>

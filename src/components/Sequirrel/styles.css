@@ -199,3 +199,23 @@
 #feature-relationship-container > img {
   width: 60%;
 }
+
+#sequirrel-video-page {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#sequirrel-video-page > div {
+  height: 80%;
+  width: 80%;
+  padding: 20px;
+  border: 1px solid white;
+  border-radius: 20px;
+}
+
+#sequirrel-video-page > div > video {
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
