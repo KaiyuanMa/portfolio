@@ -12,8 +12,6 @@ function Skills() {
       start: "top top",
       pin: true,
       scrub: 0.5,
-      // end: "+=1000",
-      markers: true,
     });
     document.getElementById("cards").onmousemove = (e) => {
       for (const card of document.getElementsByClassName("card")) {
