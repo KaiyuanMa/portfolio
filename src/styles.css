@@ -395,3 +395,14 @@ body {
   height: 1px;
   background-color: rgba(255, 255, 255, 0.5);
 }
+
+.videoContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.videoContainer > video {
+  width: 100%;
+  height: 100%;
+}
