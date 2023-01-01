@@ -9,8 +9,14 @@ function Project() {
     gsap.registerPlugin(ScrollTrigger);
     const tl = gsap.timeline();
     tl.to("#sequirrel", { scale: 0.9, delay: 5, duration: 3 })
-      .to("#board-company", {
+      .to("#web-image", {
         yPercent: -100,
+        duration: 10,
+      })
+      .to("#web-image", { delay: 5 })
+      .to("#web-image", { scale: 0.9, delay: 5, duration: 3 })
+      .to("#board-company", {
+        yPercent: -200,
         duration: 10,
       })
       .to("#board-company", { delay: 5 });
@@ -50,6 +56,30 @@ function Project() {
         <Link to="/sequirrel">
           <div className="project-link-btn">Learn More</div>
         </Link>
+      </div>
+      <div className="project full-page-scroll" id="web-image">
+        <div className="project-basic-info">
+          <div className="project-tags">
+            <div className="project-tag">Personal Project</div>
+          </div>
+          <a
+            href="https://chrome.google.com/webstore/detail/web-image-translator/hoboigmahmnghbeknkljmfnnnaajpmbe?hl=zh-CN&authuser=0"
+            target="_blank"
+          >
+            <div className="project-name" id="board-company-title">
+              Web Image Translator
+            </div>
+          </a>
+          <div className="project-techs">
+            <div className="project-tech">Google Cloud</div>
+            <div className="project-tech">Node.js</div>
+            <div className="project-tech">Manifest v3</div>
+            <div className="project-tech">Express</div>
+          </div>
+        </div>
+        <NavLink to="/boardCompany">
+          <div className="project-link-btn">Learn More</div>
+        </NavLink>
       </div>
       <div className="project full-page-scroll" id="board-company">
         <div className="project-basic-info">

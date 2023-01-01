@@ -257,6 +257,20 @@ function index() {
           />
         </div>
       </div>
+      <div id="sequirrel-action-container">
+        <a href="https://sequirrel.herokuapp.com/" target="_blank">
+          <div className="project-link action-container">
+            <img src={logo}></img>
+            <div>Live Site</div>
+          </div>
+        </a>
+        <a href="https://github.com/KaiyuanMa/sequirrel" target="_blank">
+          <div className="github-link action-container">
+            <i class="fa-brands fa-github"></i>
+            <div>Github</div>
+          </div>
+        </a>
+      </div>
     </div>
   );
 }
