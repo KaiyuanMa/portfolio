@@ -191,10 +191,6 @@ function index() {
           How many steps do you need to create a database ?
         </h1>
         <div id="step-container">
-          {/* <div id="step-container-1">
-                <h2>App Concept</h2>
-                <i className="fa-regular fa-lightbulb"></i>
-              </div> */}
           <div id="step-container-2">
             <h2>Define Models</h2>
             <i className="fa-solid fa-database"></i>
