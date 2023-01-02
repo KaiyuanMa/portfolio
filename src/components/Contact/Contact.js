@@ -12,7 +12,7 @@ function Contact() {
         "service_nckisme",
         "template_n1cinwk",
         form.current,
-        "E77Er8tj4zvt7MOYy"
+        process.env.EMAIL_KEY
       )
       .then(
         (result) => {
