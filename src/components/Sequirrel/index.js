@@ -187,7 +187,7 @@ function index() {
         </div>
       </div>
       <div id="sequirrel-problem">
-        <h1 id="sequirrel-problem-question">
+        <h1 id="sequirrel-problem-question" className="project-page-title">
           How many steps do you need to create a database ?
         </h1>
         <div id="step-container">
@@ -210,7 +210,9 @@ function index() {
         </div>
       </div>
       <div id="sequirrel-features-page">
-        <div id="sequirrel-features-page-title">What it can do</div>
+        <div id="sequirrel-features-page-title" className="project-page-title">
+          What it can do
+        </div>
         <div id="sequirrel-features">
           <div
             className="sequirrel-feature-container"

@@ -52,11 +52,6 @@
   align-items: center;
 }
 
-#sequirrel-problem-question {
-  font-size: 2vw;
-  font-weight: 300;
-}
-
 #step-container {
   display: flex;
   flex-wrap: wrap;
@@ -118,8 +113,6 @@
 
 #sequirrel-features-page-title {
   position: absolute;
-  font-size: 3vw;
-  font-weight: 300;
 }
 
 #sequirrel-features {
