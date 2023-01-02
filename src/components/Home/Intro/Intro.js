@@ -15,6 +15,11 @@ function Intro() {
 
   return (
     <div id="intro" className="full-page-scroll">
+      <a href="https://github.com/KaiyuanMa/portfolio" target="_blank">
+        <div id="portfolio-link">
+          <i class="fa-brands fa-square-github"></i> Site is under development
+        </div>
+      </a>
       <IntroBackground />
       <div id="intro-text">
         <div className="title">
