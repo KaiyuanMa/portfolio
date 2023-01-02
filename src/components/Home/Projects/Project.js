@@ -77,7 +77,7 @@ function Project() {
             <div className="project-tech">Express</div>
           </div>
         </div>
-        <NavLink to="/boardCompany">
+        <NavLink to="/webImage">
           <div className="project-link-btn">Learn More</div>
         </NavLink>
       </div>

@@ -11,6 +11,7 @@ import AboutMe from "./components/AboutMe/AboutMe";
 import Contact from "./components/Contact/Contact";
 import Sequirrel from "./components/Sequirrel";
 import TheBoardCompany from "./components/TheBoardCompany";
+import WebImageTranslator from "./components/WebImageTranslator";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import ScrollSmoother from "gsap/ScrollSmoother";
@@ -87,7 +88,8 @@ function App() {
               <Route path="/aboutMe" element={<AboutMe />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/sequirrel" element={<Sequirrel />} />
-              <Route path="/the-board-company" element={<TheBoardCompany />} />
+              <Route path="/webImage" element={<WebImageTranslator />} />
+              <Route path="/boardCompany" element={<TheBoardCompany />} />
             </Routes>
           </div>
         </div>
