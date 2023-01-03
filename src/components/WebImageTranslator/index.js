@@ -77,7 +77,7 @@ function index() {
       start: "top top",
       scrub: true,
       pin: true,
-      markers: true,
+      // markers: true,
     });
   }, []);
   return (
