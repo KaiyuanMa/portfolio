@@ -4,10 +4,33 @@
   align-items: center;
   justify-content: center;
   border-top: 1px solid rgba(255, 255, 255, 0.5);
+  width: 100vw;
+  position: relative;
 }
 
 .footer-links {
+  width: 100%;
   font-size: 1.7rem;
   display: flex;
   gap: 10px;
+}
+
+#logo-cite {
+  left: 5%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-size: 1rem;
+  font-weight: 100;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+#logo-cite > a {
+  transition-duration: 0.5s;
+}
+
+#logo-cite > a:hover {
+  color: white;
 }

@@ -15,6 +15,7 @@ import WebImageTranslator from "./components/WebImageTranslator";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import ScrollSmoother from "gsap/ScrollSmoother";
+import Logo from "../public/MKY_LOGO_2.svg";
 import "./styles.css";
 
 let smoother = null;
@@ -97,7 +98,7 @@ function App() {
       <div className="nav">
         <div className="nav-bar">
           <a className="nav-bar-icon" href="/">
-            K
+            <img src={Logo} />
           </a>
           <div className="nav-bar-toggle" onClick={menuToggle}>
             <span></span>
