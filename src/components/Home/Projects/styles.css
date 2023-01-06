@@ -129,10 +129,18 @@
   gap: 30px;
 }
 
-.project-link-btn {
+.project-link-btn-container {
   position: absolute;
   bottom: 10%;
   right: 5%;
+  display: flex;
+  justify-items: center;
+  align-content: center;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.project-link-btn {
   cursor: pointer;
   padding: 10px;
   border: 1px solid transparent;
@@ -141,6 +149,14 @@
 
 .project-link-btn:hover {
   border: 1px solid white;
+}
+
+.project-link-btn-disabled {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.project-link-btn-disabled:hover {
+  border: 1px solid transparent;
 }
 
 .project-techs {

@@ -53,9 +53,14 @@ function Project() {
             <div className="project-tech">Express</div>
           </div>
         </div>
-        <Link to="/sequirrel">
-          <div className="project-link-btn">Learn More</div>
-        </Link>
+        <div className="project-link-btn-container">
+          <Link to="/sequirrel">
+            <div className="project-link-btn">Learn More</div>
+          </Link>
+          <a href="https://sequirrel.herokuapp.com/" target="_blank">
+            <div className="project-link-btn">Live Site</div>
+          </a>
+        </div>
       </div>
       <div className="project full-page-scroll" id="web-image">
         <div className="project-basic-info">
@@ -77,9 +82,19 @@ function Project() {
             <div className="project-tech">Express</div>
           </div>
         </div>
-        <NavLink to="/webImage">
-          <div className="project-link-btn">Learn More</div>
-        </NavLink>
+        <div className="project-link-btn-container">
+          {/* <NavLink to="/webImage"> */}
+          <div className="project-link-btn project-link-btn-disabled">
+            Learn More
+          </div>
+          {/* </NavLink> */}
+          <a
+            href="https://chrome.google.com/webstore/detail/web-image-translator/hoboigmahmnghbeknkljmfnnnaajpmbe?hl=zh-CN&authuser=0"
+            target="_blank"
+          >
+            <div className="project-link-btn">Live Site</div>
+          </a>
+        </div>
       </div>
       <div className="project full-page-scroll" id="board-company">
         <div className="project-basic-info">
@@ -98,9 +113,16 @@ function Project() {
             <div className="project-tech">Express</div>
           </div>
         </div>
-        <NavLink to="/boardCompany">
-          <div className="project-link-btn">Learn More</div>
-        </NavLink>
+        <div className="project-link-btn-container">
+          {/* <NavLink to="/boardCompany"> */}
+          <div className="project-link-btn project-link-btn-disabled">
+            Learn More
+          </div>
+          {/* </NavLink> */}
+          <a href="https://the-board-company.herokuapp.com/" target="_blank">
+            <div className="project-link-btn">Live Site </div>
+          </a>
+        </div>
       </div>
     </div>
   );
