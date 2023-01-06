@@ -13,7 +13,7 @@ function index() {
       stagger: 0.5,
       opacity: 0,
       ease: "power3",
-      delay: 0.5,
+      delay: 1,
     });
     gsap.from(".project-info-comment", {
       duration: 1,
@@ -21,7 +21,7 @@ function index() {
       stagger: 0.5,
       opacity: 0,
       ease: "power3",
-      delay: 0.5,
+      delay: 1,
     });
     gsap.from(".project-info-label", {
       duration: 1,
@@ -40,7 +40,7 @@ function index() {
       delay: 1,
     });
     const tl = gsap.timeline();
-    tl.to(".web-img-problem-text", {
+    tl.to(".web-img-problem-text-container", {
       delay: 1,
       backgroundColor: "rgb(25, 25, 25)",
       borderColor: "rgba(255, 255, 255, 0.5)",
@@ -70,14 +70,37 @@ function index() {
       .to("#web-img-problem-title", {
         opacity: 1,
         duration: 1,
+      })
+      .to("#web-img-problem-text-animation", {
+        delay: 2,
+        duration: 2,
+        text: "こんにちは、私の名前は馬開元です",
+      })
+      .to(
+        "#web-img-problem-title",
+        {
+          opacity: 0,
+          duration: 1,
+        },
+        "<"
+      )
+      .to("#web-img-problem-title", {
+        duration: 0,
+        text: "What about languages you can't type ?",
+        ease: "none",
+      })
+      .to("#web-img-problem-title", {
+        opacity: 1,
+        duration: 1,
       });
     ScrollTrigger.create({
       animation: tl,
       trigger: "#web-img-problem",
       start: "top top",
+      end: "+=5000",
       scrub: true,
       pin: true,
-      // markers: true,
+      markers: true,
     });
   }, []);
   return (
@@ -111,13 +134,18 @@ function index() {
           Translating text is easy
         </div>
         <div id="web-img-problem-content">
-          <div className="web-img-problem-text web-img-problem-img">
-            Hello, My name is Kaiyuan Ma
+          <div className="web-img-problem-text-container web-img-problem-img">
+            <div
+              className="web-problem-text"
+              id="web-img-problem-text-animation"
+            >
+              你好，我的名字是马开元
+            </div>
             <div className="web-img-problem-text-imgText">.img</div>
           </div>
           <i class="fa-solid fa-arrow-right"></i>
-          <div className="web-img-problem-text web-img-problem-img">
-            你好，我的名字是马开元
+          <div className="web-img-problem-text-container  web-img-problem-img">
+            <div className="web-problem-text">Hello, My name is Kaiyuan Ma</div>
             <div className="web-img-problem-text-imgText">.img</div>
           </div>
         </div>
