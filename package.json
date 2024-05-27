@@ -25,6 +25,7 @@
     "gsap": "npm:@gsap/shockingly@^3.11.4",
     "mini-css-extract-plugin": "^2.7.0",
     "nodemon": "^2.0.20",
+    "noisejs": "^2.1.0",
     "react": "^18.2.0",
     "react-router-dom": "^6.4.3",
     "scroll-behavior": "^0.11.0",

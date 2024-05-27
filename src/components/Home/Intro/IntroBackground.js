@@ -1,9 +1,11 @@
 import React, { useEffect } from "react";
-import * as dat from "dat.gui";
+import { Noise } from "noisejs";
 import "./styles.css";
 
 function IntroBackground() {
   useEffect(() => {
+    var noise = new Noise(Math.random());
+
     const renderer = new THREE.WebGLRenderer({
       canvas: webgl,
       alpha: true,
