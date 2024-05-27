@@ -283,9 +283,9 @@ body {
   display: grid;
   grid-template: repeat(3, 18vw) / repeat(4, 20vw);
   grid-template-areas:
-    "education education education education"
-    "language  library  tools framework"
-    "experience experience experience project";
+    "experience experience experience experience"
+    "language framework tools library"
+    "education education education project";
   justify-content: center;
   padding-top: 8rem;
   padding-bottom: 8rem;
@@ -300,6 +300,7 @@ body {
 
 .education-box {
   grid-area: education;
+  border-right: none;
 }
 
 .language-box {
@@ -311,13 +312,13 @@ body {
 .framework-box {
   border: none;
   border-left: 1px solid rgba(255, 255, 255, 0.5);
-  border-right: 1px solid rgba(255, 255, 255, 0.5);
   grid-area: framework;
 }
 
 .library-box {
   border: none;
   border-left: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
   grid-area: library;
 }
 
@@ -328,7 +329,6 @@ body {
 }
 
 .experience1-box {
-  border-right: none;
   grid-area: experience;
 }
 

@@ -88,39 +88,8 @@ function Project() {
             Learn More
           </div>
           {/* </NavLink> */}
-          <a
-            href="https://chrome.google.com/webstore/detail/web-image-translator/hoboigmahmnghbeknkljmfnnnaajpmbe?hl=zh-CN&authuser=0"
-            target="_blank"
-          >
-            <div className="project-link-btn">Live Site</div>
-          </a>
-        </div>
-      </div>
-      <div className="project full-page-scroll" id="board-company">
-        <div className="project-basic-info">
-          <div className="project-tags">
-            <div className="project-tag">Team Project</div>
-          </div>
-          <a href="https://the-board-company.herokuapp.com/" target="_blank">
-            <div className="project-name" id="board-company-title">
-              The Board Company
-            </div>
-          </a>
-          <div className="project-techs">
-            <div className="project-tech">React</div>
-            <div className="project-tech">Node.js</div>
-            <div className="project-tech">React Redux</div>
-            <div className="project-tech">Express</div>
-          </div>
-        </div>
-        <div className="project-link-btn-container">
-          {/* <NavLink to="/boardCompany"> */}
-          <div className="project-link-btn project-link-btn-disabled">
-            Learn More
-          </div>
-          {/* </NavLink> */}
-          <a href="https://the-board-company.herokuapp.com/" target="_blank">
-            <div className="project-link-btn">Live Site </div>
+          <a href="https://github.com/KaiyuanMa/imgChrome" target="_blank">
+            <div className="project-link-btn">Github Link</div>
           </a>
         </div>
       </div>

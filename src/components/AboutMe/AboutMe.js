@@ -43,25 +43,26 @@ function AboutMe() {
         <div className="box language-box">
           <div className="box-header">Language</div>
           <div className="box-content">
-            <span>JavaScript</span>
-            <span>Java</span>
-          </div>
-        </div>
-        <div className="box library-box">
-          <div className="box-header">Library</div>
-          <div className="box-content">
-            <span>React</span>
-            <span>Redux</span>
-            <span>GSAP</span>
-            <span>Sequelize</span>
-            <span>React Flow</span>
+            <span>Typescript</span>
+            <span>Rust</span>
           </div>
         </div>
         <div className="box framework-box">
           <div className="box-header">Framework</div>
           <div className="box-content">
-            <span>Express.js</span>
+            <span>React</span>
+            <span>Svelte</span>
             <br />
+          </div>
+        </div>
+        <div className="box library-box">
+          <div className="box-header">Library</div>
+          <div className="box-content">
+            <span>HTMX</span>
+            <span>Redux</span>
+            <span>Tailwind</span>
+            <span>Redux</span>
+            <span>Express.js</span>
           </div>
         </div>
         <div className="box tools-box">
@@ -76,8 +77,8 @@ function AboutMe() {
           <div className="box-header">Experience</div>
           <div className="box-content-container">
             <div className="flex-box-content box-content">
-              <h2>Allied Millennial Partners</h2>
-              <span>Investment Banking Analyst Intern</span>
+              <h2>Zerosync</h2>
+              <span>Software engineer</span>
             </div>
             <div className="flex-box-content box-content">
               <h2>Advent International</h2>

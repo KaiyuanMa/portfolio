@@ -3,9 +3,9 @@
   display: grid;
   grid-template: repeat(3, 18vw) / repeat(4, 20vw);
   grid-template-areas:
-    "education education education education"
-    "language  library  tools framework"
-    "experience experience experience project";
+    "experience experience experience experience"
+    "language framework tools library"
+    "education education education project";
   justify-content: center;
   padding-top: 8rem;
   padding-bottom: 8rem;
